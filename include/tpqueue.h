@@ -5,13 +5,13 @@ struct SYM {
   char ch;
   int prior;
 };
-template<typename T, const int size>
+template<typename T, int size>
 class TPQueue {
  private:
-  SYM m[size];
+  SYM m[5];
   int count;
   int head;
-  
+ 
  public:
   TPQueue() {
     count = 0;
