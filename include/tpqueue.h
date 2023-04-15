@@ -11,7 +11,7 @@ class TPQueue {
   SYM m[5];
   int count;
   int head;
- 
+
  public:
   TPQueue() {
     count = 0;
