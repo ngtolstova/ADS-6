@@ -5,7 +5,7 @@ struct SYM {
   char ch;
   int prior;
 };
-template<typename T, int size>
+template<typename T, const int size>
 class TPQueue {
  private:
   SYM m[size];
@@ -39,14 +39,14 @@ class TPQueue {
           m[pos] = elm;
           count++;
           break;
-	}
+        }
       }
     }
     return;
   }
   T pop() {
     if (count == 0) {
-      return SYM{'0',0};
+      return SYM{'0', 0};
     }
     SYM Buf = m[head];
     m[head].ch = 0;
